@@ -43,7 +43,7 @@ The last 10% of features have little effect on model training and can be conside
   ![image](./pictures/feature_importance.png)  
 # 3. New Model Structure
 ## 3.1 Structure Introduction
-Last time, an HSBC customer shared the method of vertical module modeling and horizontal segment modeling. I was very interested. After the class, I had an in-depth exchange with him and learned a new modeling method that combines modules and segments. Here I made my attempt at modeling. 
+Last time, an HSBC customer shared the method of vertical module modeling and horizontal segment modeling. I was very interested. After the class, I had an in-depth exchange with him and learned a new modeling method that combines modules and segments. Here I made my attempt at modeling.   
 Specifically, from a vertical perspective, based on module modeling, we can train three models on this data set. After each model is trained, it can predict the probability of default of each sample, so that each sample can get three new features predicted by the model. Then we model based on the segment horizontally, use the three new features just output by the vertical model for modeling training, and finally make predictions.  
 In the code, I wrote a **StackModel class** to implement this modeling method.  
 **The advantage of this modeling method** is that it solves the problem of traditional modeling and prediction based only on segment/module, where there are very few default samples in a certain segment, and it is difficult for the model to learn default samples from these samples. 
