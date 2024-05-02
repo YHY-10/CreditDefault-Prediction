@@ -1,3 +1,7 @@
+# File Structure of My Project
+- [Dataset](./dataset): Raw data provided by PHBS Guest.
+- [Images](./pictures): Images shown in this file.
+- [Code](./Final_project.ipynb): Code of my project including **DataAnalysis and Processing, BenchMark Model, New Model Structure, AutoEncoder to generate more features**.
 # CreditDefault-Prediction
 # 0. DataSource Description
   The data comes from the data set shared by HSBC Guest for the second time. The theme is to predict the loan default of a company based on its financial, internal behavior and other data.  
